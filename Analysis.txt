@@ -1,0 +1,10 @@
+Part IV - A: 
+us-central1 /register: 328
+us-central1 /list: 47.4
+europe-west1 /register: 679.7 
+europe-west1 /list: 274.9
+
+Part IV - B: 
+Misses: 0 out of 100
+
+Analysis: 
