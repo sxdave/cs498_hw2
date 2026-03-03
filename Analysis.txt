@@ -8,3 +8,6 @@ Part IV - B:
 Misses: 0 out of 100
 
 Analysis: 
+My results from Part IV - A (latency measures) show a regional performance difference, with the US region performing better than the European region. For /register, us-central1 had an average latency of 328 ms, while /list had an average latency of 47.4 ms. On the other hand, europe-west1 had an average latency of 679.7 ms for /register and an average latency of 274.9 ms for /list. Since our script is running locally within the U.S, the regional difference could be explained by geographic distance, since the round-trip time is longer to the European region. /register has higher latency than /list for both regions since it's a write operation, while /list is a read operation (therefore faster). 
+
+In the eventual consistency experiment, there were 0 misses out of 100 attempts, which means that newly registered usernames were immediately visible to queries from the other region. This suggests that replication occurred very quickly in our setup. In our setup, this might be explainable since we have low load and small data sizes; no delays were observable at our level. 
